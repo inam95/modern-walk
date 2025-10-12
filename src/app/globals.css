@@ -1,19 +1,82 @@
 @import "tailwindcss";
 
 :root {
+  /* Colors */
+  --primary: #0a0a0a;
+  --secondary: #f5f5f5;
+  --muted: #f5f5f5;
   --background: #ffffff;
-  --foreground: #171717;
-  --font-sans: var(--font-inter);
+  --foreground: #111111;
+  --muted-foreground: #737373;
+  --border-primary: #e5e5e5;
+  --border-secondary: #0a0a0a;
+
+  /* Gradients */
+  --gradient-overlay: linear-gradient(180deg, #0a0a0a00 0%, #0a0a0a33 100%);
+
+  /* Shadows */
+  --shadow-sm: 0px 1px 2px 0px #0000000a;
+  --shadow-lg: 0px 10px 15px -3px #0000001a, 0px 4px 6px 0px #0206170d;
+
+  /* Typography */
+  --heading-3-size: 30px;
+  --heading-3-leading: 30px;
+  --heading-3-weight: 700;
+
+  --heading-4-size: 36px;
+  --heading-4-leading: 40px;
+  --heading-4-weight: 700;
+
+  --text-base-size: 16px;
+  --text-base-leading: 16px;
+  --text-base-weight: 400;
+
+  --text-small-size: 14px;
+  --text-small-leading: 14px;
+  --text-small-weight: 400;
+
 }
 
+/* ShadCN Theme */
 @theme inline {
+}
+
+/* Overrides */
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border-primary: var(--border-primary);
+  --color-border-secondary: var(--border-secondary);
+
+  --background-image-gradient-overlay: var(--gradient-overlay);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-lg: var(--shadow-lg);
+
+  --text-heading-3: var(--heading-3-size);
+  --leading-heading-3: var(--heading-3-leading);
+  --font-weight-heading-3: var(--heading-3-weight);
+
+  --text-heading-4: var(--heading-4-size);
+  --leading-heading-4: var(--heading-4-leading);
+  --font-weight-heading-4: var(--heading-4-weight);
+
+  --text-base: var(--text-base-size);
+  --leading-base: var(--text-base-leading);
+  --font-weight-base: var(--text-base-weight);
+
+  --text-sm: var(--text-small-size);
+  --leading-sm: var(--text-small-leading);
+  --font-weight-sm: var(--text-small-weight);
+
+
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
 }
