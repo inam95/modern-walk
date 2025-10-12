@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { SearchInput } from "@/components";
 
 const NAV_ITEMS = [
   {
@@ -54,8 +55,8 @@ export function Navbar() {
             ))}
           </ul>
         </nav>
-        <div>
-          <p>SEARCH BAR</p>
+        <div className="hidden w-full max-w-[350px] sm:block">
+          <SearchInput />
         </div>
         <div>
           <p>CART</p>
