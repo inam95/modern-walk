@@ -43,7 +43,7 @@ export function Footer() {
                   alt: "X",
                 },
               ].map((item) => (
-                <div className="bg-background flex size-10 items-center justify-center rounded-md p-2">
+                <div className="bg-background flex size-10 items-center justify-center rounded-md p-2" key={item.alt}>
                   <Image src={item.icon} alt={item.alt} width={16} height={16} />
                 </div>
               ))}
@@ -51,7 +51,7 @@ export function Footer() {
           </div>
           <div className="flex gap-8 md:col-span-5 md:col-start-8">
             {columns.map((column) => (
-              <div className="flex flex-col gap-8 md:flex-1">
+              <div key={column.title} className="flex flex-col gap-8 md:flex-1">
                 <div>
                   <h2 className="leading-base font-semibold">{column.title}</h2>
                 </div>

@@ -3,14 +3,13 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import { LogOutIcon } from "lucide-react";
+import Image from "next/image";
 import { NavItems } from "./nav-items";
 
 export function UserDropdown() {
