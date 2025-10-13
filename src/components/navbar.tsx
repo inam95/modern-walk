@@ -9,7 +9,7 @@ import { UserDropdown } from "@/components/user-dropdown";
 
 export function Navbar() {
   return (
-    <header className="bg-background sticky top-0 z-50">
+    <header className="bg-background border-border-primary sticky top-0 z-50 border-b">
       <div className="container mx-auto flex items-center justify-between py-9">
         <Link href="/">
           <h1 className="text-heading-3 leading-heading-3 font-heading-3">MW.</h1>

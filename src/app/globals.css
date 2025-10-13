@@ -36,6 +36,10 @@
   --text-small-leading: 14px;
   --text-small-weight: 400;
 
+  --text-extra-small-size: 12px;
+  --text-extra-small-leading: 16px;
+  --text-extra-small-weight: 400;
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -136,6 +140,10 @@
   --text-sm: var(--text-small-size);
   --leading-sm: var(--text-small-leading);
   --font-weight-sm: var(--text-small-weight);
+
+  --text-extra-small: var(--text-extra-small-size);
+  --leading-extra-small: var(--text-extra-small-leading);
+  --font-weight-extra-small: var(--text-extra-small-weight);
 }
 
 @layer base {
