@@ -57,7 +57,10 @@ export function Footer() {
                 </div>
                 <ul className="flex flex-col gap-4">
                   {column.links.map((link) => (
-                    <li className="text-extra-small leading-extra-small font-extra-small text-muted-foreground">
+                    <li
+                      key={link}
+                      className="text-extra-small leading-extra-small font-extra-small text-muted-foreground"
+                    >
                       {link}
                     </li>
                   ))}
