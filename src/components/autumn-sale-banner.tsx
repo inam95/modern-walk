@@ -8,7 +8,7 @@ export function AutumnSaleBanner() {
           <div className="flex items-center gap-2">
             <h2 className="text-heading-3 leading-heading-3 font-heading-3">Autumn Sale</h2>
           </div>
-          <p className="text-muted-foreground text-sm md:text-base">Limited time only. Don't miss out!</p>
+          <p className="text-muted-foreground text-sm md:text-base">Limited time only. Don&apos;t miss out!</p>
           <h3 className="text-heading-4 leading-heading-4 font-heading-4">40% Off</h3>
         </div>
 
