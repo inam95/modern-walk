@@ -31,7 +31,7 @@ export function HeroSection() {
           </div>
           <div className="flex items-center gap-12">
             {metrics.map((metric) => (
-              <div key={metric.label}>
+              <div key={metric.label} className="flex flex-col gap-1">
                 <h3 className="text-heading-3 leading-heading-3 font-heading-3">{metric.number}</h3>
                 <p className="text-extra-small leading-extra-small font-extra-small text-muted-foreground">
                   {metric.label}
