@@ -5,12 +5,13 @@
 
 :root {
   /* Colors */
-  --primary: oklch(0.205 0 0);
-  --secondary: oklch(0.97 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  --primary: #171717;
+  --secondary: #f5f5f5;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
   --border-primary: #e5e5e5;
   --border-secondary: #0a0a0a;
+  --input: #e5e5e5;
 
   /* Gradients */
   --gradient-overlay: linear-gradient(180deg, #0a0a0a00 0%, #0a0a0a33 100%);
@@ -119,6 +120,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-border-primary: var(--border-primary);
   --color-border-secondary: var(--border-secondary);
+  --color-input: var(--input);
 
   --background-image-gradient-overlay: var(--gradient-overlay);
 
