@@ -29,7 +29,7 @@ export function HeroSection() {
             <p className="text-muted-foreground">Step into timeless fashion made for today’s lifestyle.</p>
             <Button className="h-10 w-fit">Shop Now</Button>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-12">
             {metrics.map((metric) => (
               <div key={metric.label}>
                 <h3 className="text-heading-3 leading-heading-3 font-heading-3">{metric.number}</h3>

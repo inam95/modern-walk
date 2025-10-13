@@ -24,7 +24,7 @@ const categories = [
 
 export function ShopByCategory() {
   return (
-    <section className="container mx-auto flex flex-col gap-16">
+    <section className="container mx-auto flex flex-col gap-8">
       <div className="flex items-center justify-between">
         <h2 className="text-heading-3 leading-heading-3 font-heading-3">Shop by Category</h2>
         <Button variant="ghost">
