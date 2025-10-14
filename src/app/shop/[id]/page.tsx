@@ -113,7 +113,7 @@ export default function ShopItem() {
         </div>
       </div>
       <div />
-      <HomeProductRow title="Related Products" items={sampleItems} />
+      {/* <HomeProductRow title="Related Products" items={sampleItems} /> */}
     </main>
   );
 }
