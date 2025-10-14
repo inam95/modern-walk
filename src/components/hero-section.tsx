@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
 
 const metrics = [
   {
@@ -27,7 +28,9 @@ export function HeroSection() {
               Redefining Fashion with Modern Walk
             </h1>
             <p className="text-muted-foreground">Step into timeless fashion made for today’s lifestyle.</p>
-            <Button className="h-10 w-fit">Shop Now</Button>
+            <Link href="/shop" className={buttonVariants({ variant: "default", className: "h-10 w-fit" })}>
+              Shop Now
+            </Link>
           </div>
           <div className="flex items-center gap-12">
             {metrics.map((metric) => (

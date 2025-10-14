@@ -2,23 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 
 const categories = [
   {
     title: "New Arrivals",
     image: "/images/new-arrivals.png",
-    href: "/category/new-arrivals",
+    href: "/shop?category=new-arrivals",
   },
   {
     title: "Women's Clothing",
     image: "/images/women-clothing.png",
-    href: "/category/womens",
+    href: "/shop?category=women",
   },
   {
     title: "Men's Clothing",
     image: "/images/men-clothing.png",
-    href: "/category/mens",
+    href: "/shop?category=men",
   },
 ];
 
@@ -27,10 +27,10 @@ export function ShopByCategory() {
     <section className="container mx-auto flex flex-col gap-8">
       <div className="flex items-center justify-between">
         <h2 className="text-heading-3 leading-heading-3 font-heading-3">Shop by Category</h2>
-        <Button variant="ghost">
+        <Link href="/shop" className={`${buttonVariants({ variant: "ghost" })} p-0`}>
           Browse All Categories
           <ArrowRightIcon className="size-4" />
-        </Button>
+        </Link>
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <Link href={categories[0].href} className="group relative h-[500px] overflow-hidden rounded-xl">
