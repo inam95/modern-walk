@@ -1,6 +1,9 @@
 "use client";
 
+import { useQueryState } from "nuqs";
+
 import { Checkbox } from "@/components/ui/checkbox";
+import { cn } from "@/lib/utils";
 
 const FILTERS = [
   {
@@ -9,23 +12,27 @@ const FILTERS = [
   },
   {
     label: "Men",
-    value: "mens-clothing",
+    value: "men",
   },
   {
     label: "Women",
-    value: "womens-clothing",
+    value: "women",
   },
   {
-    label: "Unisex",
-    value: "unisex",
+    label: "Jewelery",
+    value: "jewelery",
   },
   {
-    label: "Accessories",
-    value: "accessories",
+    label: "Electronics",
+    value: "electronics",
   },
 ];
 
 export function Filters() {
+  const [category, setCategory] = useQueryState("category", {
+    defaultValue: "new-arrivals",
+    shallow: false,
+  });
   return (
     <aside className="sticky top-30 hidden h-fit min-w-60 md:block">
       <div className="mb-6">
@@ -34,11 +41,16 @@ export function Filters() {
 
       <ul className="space-y-2">
         {FILTERS.map((filter) => {
+          const isChecked = filter.value === category;
           return (
             <li key={filter.value}>
               <div className="flex items-center gap-2 px-2 py-1.5">
-                <Checkbox className="accent-dark-900 h-4 w-4" checked />
-                <label htmlFor={filter.value} className="text-body text-dark-900">
+                <Checkbox className="accent-dark-900 h-4 w-4" checked={isChecked} />
+                <label
+                  htmlFor={filter.value}
+                  className={cn(isChecked && "font-semibold")}
+                  onClick={() => setCategory(filter.value)}
+                >
                   {filter.label}
                 </label>
               </div>

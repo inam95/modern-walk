@@ -11,4 +11,4 @@ export type Item = {
   };
 };
 
-export type Category = "women's clothing" | "men's clothing" | "jewelery" | "electronics";
+export type Category = "women's clothing" | "men's clothing" | "jewelery" | "electronics" | "";

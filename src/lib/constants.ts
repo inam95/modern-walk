@@ -52,3 +52,12 @@ export const sampleItems = [
     },
   },
 ];
+
+export const CATEGORY_MAP = {
+  "new-arrivals": "",
+  men: "men's clothing",
+  women: "women's clothing",
+  jewelery: "jewelery",
+  electronics: "electronics",
+  "": "",
+};

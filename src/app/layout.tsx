@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/ui/footer";
 import "./globals.css";
@@ -23,7 +25,9 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className={`${inter.className} flex h-full flex-col antialiased`}>
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <NuqsAdapter>{children}</NuqsAdapter>
+        </main>
         <Footer />
       </body>
     </html>
