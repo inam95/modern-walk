@@ -11,15 +11,15 @@ const NAV_ITEMS = [
     label: "Shop",
   },
   {
-    href: "/brands",
+    href: "/shop",
     label: "Brands",
   },
   {
-    href: "/about",
+    href: "/shop",
     label: "About",
   },
   {
-    href: "/contact",
+    href: "/shop",
     label: "Contact",
   },
 ];
@@ -35,7 +35,7 @@ export function NavItems() {
   return (
     <ul className="flex flex-col p-2 md:flex-row md:gap-8 md:p-3">
       {NAV_ITEMS.map((item) => (
-        <li key={item.href}>
+        <li key={item.label}>
           <Link
             href={item.href}
             className={cn("hover:text-muted-foreground text-primary transition-colors", {
