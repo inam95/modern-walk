@@ -10,3 +10,5 @@ export type Item = {
     count: number;
   };
 };
+
+export type Category = "women's clothing" | "men's clothing" | "jewelery" | "electronics";

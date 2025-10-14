@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PlusIcon, StarIcon } from "lucide-react";
 
 import { Item } from "@/lib/api/types";
@@ -6,7 +7,10 @@ import { Button } from "@/components/ui/button";
 
 export function ItemCard({ item }: { item: Item }) {
   return (
-    <div className="group hover:border-border-secondary flex h-full w-full flex-col overflow-hidden rounded-xl border transition-all duration-300 hover:shadow-lg">
+    <Link
+      href={`/shop/${item.id}`}
+      className="group hover:border-border-secondary flex h-full w-full flex-col overflow-hidden rounded-xl border transition-all duration-300 hover:shadow-lg"
+    >
       <div className="relative aspect-square w-full overflow-hidden">
         <Image
           src={item.image}
@@ -32,6 +36,6 @@ export function ItemCard({ item }: { item: Item }) {
           Add to Cart
         </Button>
       </div>
-    </div>
+    </Link>
   );
 }
