@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PlusIcon, StarIcon } from "lucide-react";
+import { StarIcon } from "lucide-react";
 
 import { Item } from "@/lib/api/types";
-import { Button } from "@/components/ui/button";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 
 export function ItemCard({ item }: { item: Item }) {
   return (
@@ -31,10 +31,7 @@ export function ItemCard({ item }: { item: Item }) {
           </div>
           <p className="text-muted-foreground line-clamp-2 text-sm">{item.description}</p>
         </div>
-        <Button className="bg-secondary text-primary group-hover:bg-primary group-hover:text-secondary mt-auto flex h-11 w-full items-center justify-center gap-2 transition-all duration-300">
-          <PlusIcon className="h-4 w-4" />
-          Add to Cart
-        </Button>
+        <AddToCartButton item={item} />
       </div>
     </Link>
   );

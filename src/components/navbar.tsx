@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SearchInput } from "@/components/search-input";
 import { NavItems } from "@/components/nav-items";
 import { UserDropdown } from "@/components/user-dropdown";
+import { CartItemNumberBadge } from "./cart-item-number-badge";
 
 export function Navbar() {
   return (
@@ -20,7 +21,10 @@ export function Navbar() {
         </div>
         <div className="flex items-center gap-8">
           <Link href="/cart">
-            <Image src="/images/cart.svg" alt="Cart" width={24} height={24} />
+            <div className="relative">
+              <Image src="/images/cart.svg" alt="Cart" width={24} height={24} />
+              <CartItemNumberBadge />
+            </div>
           </Link>
           <UserDropdown />
         </div>
