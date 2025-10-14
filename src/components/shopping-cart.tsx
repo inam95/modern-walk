@@ -28,7 +28,7 @@ export function ShoppingCart() {
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-bold">Your cart is empty</h2>
             <p className="text-muted-foreground">
-              Looks like you haven't added any items to your cart yet. Start shopping to fill it up!
+              Looks like you haven&apos;t added any items to your cart yet. Start shopping to fill it up!
             </p>
           </div>
 

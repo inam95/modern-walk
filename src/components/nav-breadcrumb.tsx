@@ -6,6 +6,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import React from "react";
 
 type NavBreadcrumbProps = {
   breadcrumbItems: {
@@ -22,12 +23,12 @@ export function NavBreadcrumb({ breadcrumbItems }: NavBreadcrumbProps) {
         {breadcrumbItems.map((item) => {
           if (!item.isActive) {
             return (
-              <>
+              <React.Fragment key={item.label}>
                 <BreadcrumbItem key={item.label}>
                   <BreadcrumbLink href={item.href}>{item.label}</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
-              </>
+              </React.Fragment>
             );
           }
           return (

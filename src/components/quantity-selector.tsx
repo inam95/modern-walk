@@ -2,7 +2,7 @@ import { MinusIcon, PlusIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Size, useCartStore } from "@/lib/store";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 export type QuantitySelectorProps = {
   quantity?: number;
@@ -22,9 +22,9 @@ export function QuantitySelector({ id, size, component, setQuantity, quantity }:
       <Button
         className="hover:text-secondary hover:bg-primary/80 bg-secondary text-muted-foreground h-10 px-3 py-3 transition-colors"
         aria-label="Decrease quantity"
-        onClick={() => {
-          component === "shopping-cart" ? decrementQuantity(id, size) : setQuantity?.((prev) => prev - 1);
-        }}
+        onClick={() =>
+          component === "shopping-cart" ? decrementQuantity(id, size) : setQuantity?.((prev) => prev - 1)
+        }
       >
         <MinusIcon className="h-4 w-4" />
       </Button>
@@ -32,9 +32,9 @@ export function QuantitySelector({ id, size, component, setQuantity, quantity }:
       <Button
         className="hover:text-secondary hover:bg-primary/80 bg-secondary text-muted-foreground h-10 px-3 py-3 transition-colors"
         aria-label="Increase quantity"
-        onClick={() => {
-          component === "shopping-cart" ? incrementQuantity(id, size) : setQuantity?.((prev) => prev + 1);
-        }}
+        onClick={() =>
+          component === "shopping-cart" ? incrementQuantity(id, size) : setQuantity?.((prev) => prev + 1)
+        }
       >
         <PlusIcon className="h-4 w-4" />
       </Button>
