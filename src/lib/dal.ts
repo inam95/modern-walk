@@ -1,5 +1,3 @@
-"use server";
-
 import { Category, Item } from "@/lib/api/types";
 
 export async function getItems(category?: Category, limit?: number): Promise<Item[]> {
@@ -23,6 +21,12 @@ export async function getFlashSaleItems(limitForEachCategory: number): Promise<I
   items.push(menItems[0], womenItems[0], menItems[1], womenItems[1]);
 
   return items;
+}
+
+export async function getItem(id: number): Promise<Item> {
+  const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const data = await response.json();
+  return data;
 }
 
 export async function sleep(ms: number): Promise<void> {

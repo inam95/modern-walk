@@ -15,7 +15,7 @@ export function AddToCartButton({ item }: { item: Item }) {
       onClick={(e) => {
         e.stopPropagation();
         e.preventDefault();
-        addToCart(item.id);
+        addToCart(item);
       }}
     >
       <PlusIcon className="h-4 w-4" />

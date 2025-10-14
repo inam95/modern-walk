@@ -1,7 +1,7 @@
 import { getFlashSaleItems, getItems } from "@/lib/dal";
 import { ItemCard } from "@/components/item-card";
 
-type TProductRow = "flash-sale" | "most-popular" | "latest-products" | "Related Products";
+type TProductRow = "flash-sale" | "most-popular" | "latest-products" | "related-products";
 
 type HomeProductRowProps = {
   title: string;

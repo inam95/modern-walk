@@ -25,6 +25,10 @@
   --heading-3-leading: 30px;
   --heading-3-weight: 700;
 
+  --heading-2-size: 24px;
+  --heading-2-leading: 24px;
+  --heading-2-weight: 700;
+
   --heading-4-size: 36px;
   --heading-4-leading: 40px;
   --heading-4-weight: 700;
@@ -130,6 +134,10 @@
   --text-heading-3: var(--heading-3-size);
   --leading-heading-3: var(--heading-3-leading);
   --font-weight-heading-3: var(--heading-3-weight);
+
+  --text-heading-2: var(--heading-2-size);
+  --leading-heading-2: var(--heading-2-leading);
+  --font-weight-heading-2: var(--heading-2-weight);
 
   --text-heading-4: var(--heading-4-size);
   --leading-heading-4: var(--heading-4-leading);
