@@ -20,7 +20,13 @@ export default async function ShopItem({ params }: PageProps) {
 
   return (
     <main className="container mx-auto flex flex-col gap-16 py-8">
-      <NavBreadcrumb />
+      <NavBreadcrumb
+        breadcrumbItems={[
+          { label: "Home", href: "/", isActive: false },
+          { label: "Shop", href: "/shop", isActive: false },
+          { label: item.title, href: `/shop/${id}`, isActive: true },
+        ]}
+      />
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
         <div className="flex flex-row gap-4 lg:col-span-2 lg:flex-col">
           {[1, 2, 3].map((_, index) => (

@@ -21,7 +21,12 @@ export default async function Shop({ searchParams }: PageProps) {
 
   return (
     <main className="container mx-auto flex flex-col gap-16">
-      <NavBreadcrumb />
+      <NavBreadcrumb
+        breadcrumbItems={[
+          { label: "Home", href: "/", isActive: false },
+          { label: "Shop", href: "/shop", isActive: true },
+        ]}
+      />
       <div className="flex items-center justify-between">
         <h1 className="text-heading-3 leading-heading-3 font-heading-3">Shop</h1>
         <Sort />

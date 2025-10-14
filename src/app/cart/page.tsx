@@ -5,7 +5,12 @@ import { Separator } from "@/components/ui/separator";
 export default function ShopItem() {
   return (
     <main className="container mx-auto flex flex-col gap-16">
-      <NavBreadcrumb />
+      <NavBreadcrumb
+        breadcrumbItems={[
+          { label: "Home", href: "/", isActive: false },
+          { label: "Shopping Cart", href: "/cart", isActive: true },
+        ]}
+      />
       <div className="flex items-center justify-between">
         <h1 className="text-heading-3 leading-heading-3 font-heading-3">Shopping Cart</h1>
       </div>

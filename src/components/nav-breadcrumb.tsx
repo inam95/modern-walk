@@ -7,17 +7,35 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-export function NavBreadcrumb() {
+type NavBreadcrumbProps = {
+  breadcrumbItems: {
+    label: string;
+    href: string;
+    isActive: boolean;
+  }[];
+};
+
+export function NavBreadcrumb({ breadcrumbItems }: NavBreadcrumbProps) {
   return (
     <Breadcrumb className="mt-32">
       <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbPage>Shop</BreadcrumbPage>
-        </BreadcrumbItem>
+        {breadcrumbItems.map((item) => {
+          if (!item.isActive) {
+            return (
+              <>
+                <BreadcrumbItem key={item.label}>
+                  <BreadcrumbLink href={item.href}>{item.label}</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+              </>
+            );
+          }
+          return (
+            <BreadcrumbItem key={item.label}>
+              <BreadcrumbPage>{item.label}</BreadcrumbPage>
+            </BreadcrumbItem>
+          );
+        })}
       </BreadcrumbList>
     </Breadcrumb>
   );
