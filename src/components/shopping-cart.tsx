@@ -14,6 +14,7 @@ export function ShoppingCart() {
   const shipping = useCartStore((state) => state.shipping());
   const tax = useCartStore((state) => state.tax());
   const grandTotal = useCartStore((state) => state.grandTotal());
+  const removeFromCart = useCartStore((state) => state.removeFromCart);
 
   if (cartItems.length === 0) {
     return (
@@ -55,6 +56,7 @@ export function ShoppingCart() {
               variant="ghost"
               className="bg-primary hover:bg-primary/90 group-hover:bg-primary/90 group-hover:text-secondary absolute -top-2 -left-2 hidden h-6 w-6 items-center justify-center rounded-full text-white transition-all duration-300 group-hover:flex"
               aria-label="Remove item"
+              onClick={() => removeFromCart(item.id, item.size)}
             >
               <XIcon className="text-secondary h-4 w-4" strokeWidth={3} fill="currentColor" />
             </Button>
